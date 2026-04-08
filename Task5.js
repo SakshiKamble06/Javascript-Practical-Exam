@@ -1,16 +1,14 @@
-function stringSlug(str1){
-  str1.toLowerCase();
+function StringSlug(str){
+    let result= ""
+    let punc="!,.@?"
+ str.replaceAll("","-")
+   for(let i=0;i<str.length;i++){
+    if(punc.includes(str[i])){
 
-let newStr =""
-let punctuation ="!,.@?"
-for(i=0;i<str1.length; i++){
-  if(punctuation.includes(str1[i])){
-    continue;
-  }
-  str1 = str1.replaceall(" ","-");
-  console.log(newStr);
+        continue;
+    }
+     result +=str[i].toLowerCase()
+   }
+console.log(result.replaceAll(" ","-"))   
 }
-str1("Learn JavaScript in 30 Days!")
-  
-
-}
+StringSlug("Learn Javascript in 30 days!")
